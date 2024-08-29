@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import Display from './display';
-import Welcome from './Welcome'; // Import the Welcome component
+import Welcome from './welcome'; // Import the Welcome component
 
 function App() {
   const [formData, setFormData] = useState({
