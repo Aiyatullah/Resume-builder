@@ -1,0 +1,104 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background.png'); /* Background image */
+    background-size: cover; /* Cover the whole viewport */
+    background-position: center; /* Center the background image */
+  }
+  
+  /* Welcome Container Styling */
+  .welcome-container {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #ffffff; /* White text color for better contrast */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+    transform: translateX(-100%); /* Start from the left side */
+    opacity: 0; /* Start invisible */
+    animation: slideInFromLeft 1s ease-out forwards, fadeIn 1s ease-out forwards;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+  }
+  
+  /* Header Styling */
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff; /* White color for header */
+    animation: fadeIn 1s ease-out;
+  }
+  
+  /* Paragraph Styling */
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #d0e3f0; /* Light blue color for paragraphs */
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 12px 25px;
+    font-size: 16px;
+    color: #ffffff; /* White text color */
+    background-color: #1e90ff; /* Bright blue color for button */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: buttonFadeIn 0.6s ease-out;
+  }
+  
+  button:hover {
+    background-color: #4682b4; /* Darker blue on hover */
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    background-color: #4169e1; /* Even darker blue when active */
+    transform: translateY(1px);
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes buttonFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

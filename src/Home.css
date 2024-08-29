@@ -1,0 +1,110 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #007bff; /* Blue background color */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Form Container Styling */
+  .form-container {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #ffffff; /* White text color */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    transform: translateX(-100%); /* Start from the left side */
+    opacity: 0; /* Start invisible */
+    animation: slideInFromLeft 1s ease-out forwards, fadeIn 1s ease-out forwards;
+  }
+  
+  /* Input and Label Styling */
+  label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #d0e3f0; /* Light blue color */
+  }
+  
+  input,
+  textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text color */
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 12px 25px;
+    font-size: 16px;
+    color: #ffffff; /* White text color */
+    background-color: #1e90ff; /* Bright blue color */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: buttonFadeIn 0.6s ease-out;
+  }
+  
+  button:hover {
+    background-color: #4682b4; /* Darker blue on hover */
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    background-color: #4169e1; /* Even darker blue when active */
+    transform: translateY(1px);
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes buttonFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

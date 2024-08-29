@@ -1,0 +1,125 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #007bff; /* Blue background color */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Display Container Styling */
+  .container {
+    max-width: 800px;
+    width: 90%;
+    padding: 30px;
+    background-color: #ffffff; /* White background for the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border-left: 5px solid #3498db; /* Blue left border */
+    transform: scale(0.95); /* Slightly smaller initial scale */
+    opacity: 0; /* Start invisible */
+    animation: fadeInUp 0.6s ease-out forwards, scaleUp 0.6s ease-out forwards;
+  }
+  
+  /* Header Styling */
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #007bff; /* Bright blue color for header */
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #000000; /* Blue border at the bottom */
+    padding-bottom: 10px;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  /* Field Styling */
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #000000; /* Black text color */
+    margin: 15px 0;
+  }
+  
+  p strong {
+    color: #007bff; /* Bright blue color for labels */
+    font-weight: 600;
+    font-size: 19px;
+  }
+  
+  /* Button Styling */
+  button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 15px 10px;
+    font-size: 16px;
+    color: #ffffff; /* White text color */
+    background-color: #1e90ff; /* Bright blue color */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: buttonFadeIn 0.6s ease-out;
+  }
+  
+  button:hover {
+    background-color: #4682b4; /* Darker blue on hover */
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    background-color: #4169e1; /* Even darker blue when active */
+    transform: translateY(1px);
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes buttonFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
