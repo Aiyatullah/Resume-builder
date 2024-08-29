@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import './Display.css';  // Import the CSS file
+import './display.css';  // Import the CSS file
 
 function Display({ formData }) {
   const componentRef = useRef();
